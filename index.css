@@ -80,7 +80,7 @@ h3{
     line-height: 1.6;
     font-weight: 400;
 
-.buttons {
+.buttons, .contact-buttons {
     display: flex;
     flex-direction: column;
     gap: 15px;
