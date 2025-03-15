@@ -17,6 +17,7 @@ header {
     position: absolute;
     top: 0;
     left: 0;
+    box-shadow: 0px 4px 10px rgba(173, 75, 0, 0.356);
 }
 
 nav {
@@ -65,7 +66,7 @@ nav {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(173, 75, 0, 0.356);
 }
 
 h1 {
