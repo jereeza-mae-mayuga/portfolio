@@ -104,17 +104,17 @@ h3{
 
 /*from https://css-pattern.com/pills*/
 html {
-    --s: 60px; /* control the size*/
-    --c1: #ffe4a8;
-    --c2: #ffb980;
-    
-    background:
-      repeating-conic-gradient(var(--c1) 0 25%,#0000 0 50%)
-       0 0/calc(4*var(--s)) calc(2*var(--s)),
-      conic-gradient(#0000 50%,var(--c2) 0)
-       calc(var(--s)/2) 0/calc(2*var(--s)) 1%,
-      radial-gradient(var(--c2) 70%,var(--c1) 72%)
-       0 0/var(--s) var(--s);
-  }
+  --s: 63px; /* control the size*/
+  --c1: #ffefc7;
+  --c2: #ffd5ad;
+  
+  background:
+    repeating-conic-gradient(var(--c1) 0 25%,#0000 0 50%)
+     0 0/calc(4*var(--s)) calc(2*var(--s)),
+    conic-gradient(#0000 50%,var(--c2) 0)
+     calc(var(--s)/2) 0/calc(2*var(--s)) 1%,
+    radial-gradient(var(--c2) 70%,var(--c1) 72%)
+     0 0/var(--s) var(--s);
+}
 
 
