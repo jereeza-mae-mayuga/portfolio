@@ -22,9 +22,15 @@ header {
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
 }
 
+.logo img {
+    height: 40px:
+}
 .nav-links {
     list-style: none;
     display: flex;
@@ -48,6 +54,29 @@ nav {
 .nav-links a:hover {
     color: rgb(253, 168, 140);
 }
+
+.nav-links a.active {
+    color: #d35400;
+    font-weight: bold;
+    border-bottom: 2px solid #d35400;
+    padding-bottom: 2px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+}
+
+.social-icons img:hover{
+    color: rgb(253, 168, 140);
+}
+    
 
 .container{
     display: flex;
