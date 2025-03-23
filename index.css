@@ -89,11 +89,10 @@ nav {
     width: 100%;
     padding: 20px;
     margin-top: 100px;
-
 }
 
 .about-container {
-    paddint-top: 100px;
+    padding-top: 100px;
     max-width: 800px;
     margin: 0 auto;
     padding-left: 20px;
@@ -114,7 +113,7 @@ nav {
     position: relative;
 }
 
-.about-container .paragraph-box: :before {
+.about-container .paragraph-box::before {
     content: "A little something about me...";
     position: absolute;
     top: 10px;
@@ -123,7 +122,7 @@ nav {
     color: #d35400;
 }
 
-.about-container .paragraph-box: :after {
+.about-container .paragraph-box::after {
     content: "";
     position: absolute;
     top: 40px;
@@ -155,11 +154,11 @@ nav {
 .software-logos img {
     width: auto;
     height: 50px;
-    max-with: 100px;
+    max-width: 100px;
     object-fit: contain;
 }
 
-.certification-container .paragraph-box {
+.certifications-container .paragraph-box {
     background-color: #ffefc7;
     border: 3px solid #d35400;
     padding: 20px;
@@ -172,7 +171,7 @@ nav {
     position: relative;
 }
 
-.certification-container .paragraph-box: :before {
+.certifications-container .paragraph-box::before {
     content: "Accomplishments I earned so far...";
     position: absolute;
     top: 10px;
@@ -181,7 +180,7 @@ nav {
     color: #d35400;
 }
 
-.certification-container .paragraph-box: :after {
+.certifications-container .paragraph-box::after {
     content: "";
     position: absolute;
     top: 40px;
@@ -191,7 +190,7 @@ nav {
     background-color: #d35400
 }
 
-.certification-container ul {
+.certifications-container ul {
     list-style: disc;
     padding-left: 20px;
     text-align: left;
