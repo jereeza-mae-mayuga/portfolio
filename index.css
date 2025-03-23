@@ -197,6 +197,38 @@ nav {
     display: block;
 }
 
+.tech-container .paragraph-box {
+    background-color: #ffefc7;
+    border: 3px solid #d35400;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(173, 75, 0, 0.233);
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 16px;
+    line-height: 1.5;
+    position: relative;
+}
+
+.tech-container .paragraph-box::before {
+    content: "My experiences...";
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 18px;
+    color: #d35400;
+}
+
+.tech-container .paragraph-box::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #d35400;
+}
+
 .profile-pic {
     width: 250px;
     height: 250px;
