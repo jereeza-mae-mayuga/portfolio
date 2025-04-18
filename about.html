@@ -80,7 +80,7 @@
         opacity: 0.7;
       }
 
-    .hamburger {
+     .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
@@ -265,6 +265,7 @@
     
       .certifications-grid img:hover {
         transform: scale(1.05);
+      }
 
 @media (max-width: 768px) {
       .hamburger {
@@ -291,38 +292,39 @@
         margin-top: 10px;
       }
     }
-      }
+
+    
 </style>
 
 </head>
     <body>
     <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html"><img src="jmm-logo1.png" alt="Logo"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="about.html" class="active">About Me</a></li>
-                <li><a href="tech.html">Tech Stack</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="social-icons">
-                <a href="https://linkedin.com/in/jereeza-mayuga-105907356" target="_blank">
-                    <img src="linkedin-logo1.png" alt="LinkedIn">
-                </a>
-                <a href="https://github.com/jereeza-mae-mayuga/" target="_blank">
-                    <img src="github-logo2.png" alt="GitHub">
-                </a>
-                <button id="darkModeToggle" style="background:none; border:none; cursor:pointer; font-size: 24px;">
-                🌙
-                </button>
-                <div class="hamburger" id="hamburger">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-        </nav>
+    <nav>
+        
+      <div class="logo">
+        <a href="index.html"><img id="site-logo" src="jmm-logo1.png" alt="Logo"></a>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="tech.html">Tech Stack</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/jereeza-mayuga-105907356/?trk=public-profile-join-page" target="_blank">
+          <img src="linkedin-logo1.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/jereeza-mae-mayuga/" target="_blank">
+          <img src="github-logo2.png" alt="GitHub">
+        </a>
+        <button id="darkModeToggle" style="background:none; border:none; cursor:pointer; font-size: 24px;">🌙</button>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
     </header>
         <div class="about-container">
             <h1>About Me</h1>
