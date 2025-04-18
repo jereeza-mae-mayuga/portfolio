@@ -5,6 +5,7 @@
   --text: #333;
 }
 
+//base
 body {
   font-family: "Nunito", sans-serif;
   margin: 0;
@@ -23,6 +24,7 @@ body {
   color: var(--text);
 }
 
+//cntnr
 .container {
   max-width: 900px;
   padding: 20px;
@@ -32,6 +34,7 @@ body {
   align-items: center;
 }
 
+//prfl pc
 .profile-pic {
   width: 250px;
   height: 250px;
@@ -46,6 +49,7 @@ body {
   transform: scale(1.05);
 }
 
+//txt
 h1 {
   font-size: 34px;
   font-weight: 700;
@@ -61,6 +65,7 @@ h3 {
   color: #555;
 }
 
+//btns
 .buttons {
   display: flex;
   flex-direction: column;
@@ -85,6 +90,7 @@ h3 {
   transform: scale(1.05);
 }
 
+//rspnsv
 @media (max-width: 768px) {
   .container {
     margin-top: 130px;
@@ -101,6 +107,7 @@ h3 {
   }
 }
 
+/lightbulb tggle
 @keyframes sway {
   0% { transform: translateX(-50%) rotate(0deg); }
   50% { transform: translateX(-50%) rotate(5deg); }
@@ -144,6 +151,7 @@ h3 {
   animation: jiggle 0.4s ease;
 }
 
+//darkmode
 body.dark-mode {
   background-color: #1f1f1f;
   color: #f5f5f5;
@@ -182,6 +190,7 @@ background-color: #f4c84e;
 color: #000;
 }
 
+//splashscreen
 #splash {
   position: fixed;
   top: 0;
