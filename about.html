@@ -79,6 +79,19 @@
       .social-icons img:hover {
         opacity: 0.7;
       }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+    }
     
       .about-container {
         padding: 100px 20px 20px;
@@ -252,6 +265,32 @@
     
       .certifications-grid img:hover {
         transform: scale(1.05);
+
+@media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #f4a300;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .social-icons {
+        margin-top: 10px;
+      }
+    }
       }
 </style>
 
@@ -277,6 +316,11 @@
                 <button id="darkModeToggle" style="background:none; border:none; cursor:pointer; font-size: 24px;">
                 🌙
                 </button>
+                <div class="hamburger" id="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
         </nav>
     </header>
@@ -328,20 +372,26 @@
                 <br>
             </div>
         </div>
-        <script>
-            const toggleBtn = document.getElementById("darkModeToggle");
-            const logo = document.getElementById("site-logo");
-            toggleBtn.addEventListener("click", function () {
-                document.body.classList.toggle("dark-mode");
-  
-                if (document.body.classList.contains("dark-mode")) {
-                    toggleBtn.textContent = "☀️";
-                    logo.src = "jmm-logo.png";
-                } else {
-                    toggleBtn.textContent = "🌙";
-                    logo.src = "jmm-logo1.png";
-                }
-            });
-        </script>
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+    const toggleBtn = document.getElementById("darkModeToggle");
+    const logo = document.getElementById("site-logo");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    toggleBtn.addEventListener("click", function () {
+      document.body.classList.toggle("dark-mode");
+      if (document.body.classList.contains("dark-mode")) {
+        toggleBtn.textContent = "☀️";
+        logo.src = "jmm-logo.png";
+      } else {
+        toggleBtn.textContent = "🌙";
+        logo.src = "jmm-logo1.png";
+      }
+    });
+  </script>
     </body>
 </html>
