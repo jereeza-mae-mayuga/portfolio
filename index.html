@@ -10,25 +10,13 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html"><img src="jmm-logo.png" alt="Logo"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="tech.html">Tech Stack</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="social-icons">
-                </a>
-                <a href="https://github.com/jereeza-mae-mayuga/" target="_blank">
-                    <img src="github-logo.png" alt="GitHub">
-                </a>
-            </div>
-        </nav>
-    </header>
-    
+    <div id="splash">
+        <img src="jmm-loho1.png" alt="Logo" class="splash-logo"/>
+    </div>
+    <div class="lightbulb-wrapper">
+        <div class="string"></div>
+        <div class="lightbulb" id="darkModeToggle">💡</div>
+    </div>
     <div class="container">
         <img src="profile2.png" alt="My Picture" class="profile-pic">
         <h1>Jereeza Mae Mayuga</h1>
@@ -39,5 +27,23 @@
             <a href="contact.html" class="btn">Contact Me</a>
         </div>
     </div>
+    <script>
+        const bulb = document.querySelector('.lightbulb');
+        bulb.addEventListener('click', () => {
+          document.body.classList.toggle('dark-mode');
+          bulb.classList.add('clicked');
+          setTimeout(() => bulb.classList.remove('clicked'), 400);
+        });
+        //splash scren will slide up here
+        window.addEventListener('load', () => {
+          const splash = document.getElementById('splash');
+          setTimeout(() => {
+        splash.classList.add('hide');
+            setTimeout(() => {
+              splash.style.display = 'none';
+            }, 1000);
+          }, 2000);
+        });
+    </script>
 </body>
 </html>
