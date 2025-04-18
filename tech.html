@@ -78,6 +78,19 @@
           .social-icons img:hover {
             opacity: 0.7;
           }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+    }
         
           .tech-container {
             padding: 100px 20px 20px;
@@ -166,32 +179,63 @@
           .logo-box:hover span {
             opacity: 1;
           }
+
+@media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #f4a300;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .social-icons {
+        margin-top: 10px;
+      }
+    }
 </style>
 
 </head>
     <body>
     <header>
         <nav>
+        
             <div class="logo">
-                <a href="index.html"><img src="jmm-logo1.png" alt="Logo"></a>
+              <a href="index.html"><img id="site-logo" src="jmm-logo1.png" alt="Logo"></a>
             </div>
-            <ul class="nav-links">
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="tech.html" class="active">Tech Stack</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <ul class="nav-links" id="nav-links">
+              <li><a href="about.html">About Me</a></li>
+              <li><a href="tech.html">Tech Stack</a></li>
+              <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
+      
             <div class="social-icons">
-                <a href="https://www.linkedin.com/in/jereeza-mayuga-105907356/?trk=public-profile-join-page" target="_blank">
-                      <img src="linkedin-logo1.png" alt="LinkedIn">
-                </a>
-                <a href="https://github.com/jereeza-mae-mayuga/" target="_blank">
-                    <img src="github-logo2.png" alt="GitHub">
-                </a>
-                <button id="darkModeToggle" style="background:none; border:none; cursor:pointer; font-size: 24px;">
-                    🌙
-                </button>
+              <a href="https://www.linkedin.com/in/jereeza-mayuga-105907356/?trk=public-profile-join-page" target="_blank">
+                <img src="linkedin-logo1.png" alt="LinkedIn">
+              </a>
+              <a href="https://github.com/jereeza-mae-mayuga/" target="_blank">
+                <img src="github-logo2.png" alt="GitHub">
+              </a>
+              <button id="darkModeToggle" style="background:none; border:none; cursor:pointer; font-size: 24px;">🌙</button>
             </div>
-        </nav>
+            <div class="hamburger" id="hamburger">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </nav>
     </header>
         <div class="tech-container">
             <h1>Tech Stack</h1>
@@ -252,14 +296,19 @@
                     </div>
                   </div>
   <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
     const toggleBtn = document.getElementById("darkModeToggle");
     const logo = document.getElementById("site-logo");
-  
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
     toggleBtn.addEventListener("click", function () {
       document.body.classList.toggle("dark-mode");
-  
       if (document.body.classList.contains("dark-mode")) {
-        toggleBtn.textContent = "☀️"; 
+        toggleBtn.textContent = "☀️";
         logo.src = "jmm-logo.png";
       } else {
         toggleBtn.textContent = "🌙";
