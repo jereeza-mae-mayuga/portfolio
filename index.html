@@ -27,23 +27,6 @@
             <a href="contact.html" class="btn">Contact Me</a>
         </div>
     </div>
-    <script>
-        const bulb = document.querySelector('.lightbulb');
-        bulb.addEventListener('click', () => {
-          document.body.classList.toggle('dark-mode');
-          bulb.classList.add('clicked');
-          setTimeout(() => bulb.classList.remove('clicked'), 400);
-        });
-        //splash scren will slide up here
-        window.addEventListener('load', () => {
-          const splash = document.getElementById('splash');
-          setTimeout(() => {
-        splash.classList.add('hide');
-            setTimeout(() => {
-              splash.style.display = 'none';
-            }, 1000);
-          }, 2000);
-        });
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
