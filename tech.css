@@ -120,9 +120,6 @@ background-color: white;
     color: #333;
     margin-bottom: 10px;
     font-weight: bold;
-    border: 2px solid #f4a300;
-    border-radius: 10px;
-    background-color: #ffe589;
   }
 
   .software-logos {
@@ -130,6 +127,7 @@ background-color: white;
     flex-wrap: wrap;
     gap: 50px;
     margin-top: 20px;
+    justify-content: center; 
   }
 
   .logo-box {

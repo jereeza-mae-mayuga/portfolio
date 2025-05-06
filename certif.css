@@ -112,10 +112,11 @@ nav {
 
 .certif-logos {
     display: flex;
-    justify-content: center;
-    gap: 30px;
     flex-wrap: wrap;
-}
+    gap: 50px;
+    margin-top: 20px;
+    justify-content: center; 
+    }
 
 .certif-logos .logo-box {
     position: relative;
