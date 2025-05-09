@@ -1,0 +1,64 @@
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+const pixelOverlay = document.querySelector(".pixel-overlay");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  anime({
+    targets: ".certif-container h1",
+    translateY: [-50, 0],
+    opacity: [0, 1],
+    duration: 1200,
+    easing: "easeOutExpo"
+  });
+
+  anime({
+    targets: ".paragraph-box",
+    translateY: [30, 0],
+    opacity: [0, 1],
+    delay: 500,
+    duration: 1000,
+    easing: "easeOutCubic"
+  });
+
+  anime({
+    targets: "nav",
+    translateY: [-40, 0],
+    opacity: [0, 1],
+    duration: 1000,
+    easing: "easeOutExpo"
+  });
+});
+
+document.querySelectorAll(".logo-box img").forEach((img) => {
+  img.addEventListener("mouseenter", () => {
+    anime({
+      targets: img,
+      scale: 1.15,
+      duration: 300,
+      easing: "easeOutQuad"
+    });
+  });
+
+  img.addEventListener("mouseleave", () => {
+    anime({
+      targets: img,
+      scale: 1,
+      duration: 300,
+      easing: "easeOutQuad"
+    });
+  });
+});
+
+function openPopup(imageSrc) {
+  const popupImg = document.getElementById('popupImg');
+  popupImg.src = imageSrc;
+  document.getElementById('imagePopup').style.display = 'block';
+}
+
+function closePopup() {
+  document.getElementById('imagePopup').style.display = 'none';
+}

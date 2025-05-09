@@ -5,7 +5,7 @@
   --text: #333;
 }
 
-/*base*/
+/* base */
 body {
   font-family: "Nunito", sans-serif;
   margin: 0;
@@ -17,14 +17,14 @@ body {
   justify-content: center;
   overflow-y: auto;
   background-color: var(--bg);
-  background-image: radial-gradient(var(--theme) 2px, transparent 2px), 
+  background-image: radial-gradient(var(--theme) 2px, transparent 2px),
                     radial-gradient(var(--theme) 2px, var(--bg) 2px);
   background-size: 80px 80px;
   background-position: 0 0, 40px 40px;
   color: var(--text);
 }
 
-/*cntnr*/
+/* container */
 .container {
   max-width: 900px;
   padding: 20px;
@@ -34,7 +34,7 @@ body {
   align-items: center;
 }
 
-/*prfl pc*/
+/* profile pic */
 .profile-pic {
   width: 250px;
   height: 250px;
@@ -49,7 +49,7 @@ body {
   transform: scale(1.05);
 }
 
-/*txt*/
+/* text */
 h1 {
   font-size: 34px;
   font-weight: 700;
@@ -65,7 +65,7 @@ h3 {
   color: #555;
 }
 
-/*btns*/
+/* buttons */
 .buttons {
   display: flex;
   flex-direction: column;
@@ -90,7 +90,7 @@ h3 {
   transform: scale(1.05);
 }
 
-/*rspnsv*/
+/* responsive */
 @media (max-width: 768px) {
   .container {
     margin-top: 130px;
@@ -107,7 +107,7 @@ h3 {
   }
 }
 
-/*lightbulb tggle*/
+/* lightbulb toggle */
 @keyframes sway {
   0% { transform: translateX(-50%) rotate(0deg); }
   50% { transform: translateX(-50%) rotate(5deg); }
@@ -151,11 +151,11 @@ h3 {
   animation: jiggle 0.4s ease;
 }
 
-/*darkmode*/
+/* dark mode */
 body.dark-mode {
   background-color: #1f1f1f;
   color: #f5f5f5;
-  background-image: radial-gradient(#ffd87a 2px, transparent 2px), 
+  background-image: radial-gradient(#ffd87a 2px, transparent 2px),
                     radial-gradient(#ffd87a 2px, #1f1f1f 2px);
 }
 
@@ -180,17 +180,17 @@ body.dark-mode .lightbulb {
 }
 
 body.dark-mode .btn {
-background-color: #ffd87a;
-background-image: none;
-color: #333;
+  background-color: #ffd87a;
+  background-image: none;
+  color: #333;
 }
 
 body.dark-mode .btn:hover {
-background-color: #f4c84e; 
-color: #000;
+  background-color: #f4c84e;
+  color: #000;
 }
 
-/*splashscreen*/
+/* splash screen */
 #splash {
   position: fixed;
   top: 0;

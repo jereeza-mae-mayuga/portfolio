@@ -1,80 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>About Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jereeza Mae Mayuga | About Me</title>
+  
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="about.css" />
-</head>
-    <body>
-    <header>
-    <nav>
+    <link rel="stylesheet" href="css/about.css" />
         
-      <div class="logo">
-        <a href="index.html"><img id="site-logo" src="jmm-logo1.png" alt="Logo"></a>
-      </div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="about.html" class="active">About Me</a></li>
-        <li><a href="tech.html">Tech Stack</a></li>
-        <li><a href="certif.html">Certifications</a></li>
-        <li><a href="contact.html">Contact Me</a></li>
-      </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  </head>
+  
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img id="site-logo" src="res/jmm-logo1.png" alt="Logo"></a>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="about.html" class="active">About Me</a></li>
+                <li><a href="tech.html">Tech Stack</a></li>
+                <li><a href="certif.html">Certifications</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
 
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/jereeza-mayuga-105907356/?trk=public-profile-join-page" target="_blank">
-          <img src="linkedin-logo1.png" alt="LinkedIn">
-        </a>
-        <a href="https://github.com/jereeza-mae-mayuga/" target="_blank">
-          <img src="github-logo2.png" alt="GitHub">
-        </a>
-        <button id="darkModeToggle" style="background:none; border:none; cursor:pointer; font-size: 24px;">🌙</button>
-      </div>
-      <div class="hamburger" id="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </nav>
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
     </header>
-        <div class="about-container">
-            <h1>About Me</h1>
-            <div class="paragraph-box">
-                <p>I am a freelance digital artist with a passion for creativity and technology. I enjoy working on illustrations and exploring new artistic techniques. Currently, I am studying programming to expand my skill set and integrate art with technology.</p>
-                <p>I aspire to create and design RPG maker games, combining storytelling and interactive experiences. Additionally, I want to develop websites for clients, as web development allows me to explore both creativity and technical skills.</p>
-                <div class="pixel-overlay">
-                    <img src="stardew-star.png" class="pixel pixel1" alt="Pixel Star">
-                    <img src="stardew-star.png" class="pixel pixel2" alt="Pixel Star">
-                    <img src="stardew-star.png" class="pixel pixel3" alt="Pixel Star">
+
+    <div class="about-container">
+        <h1>About Me</h1>
+        <div class="paragraph-box">
+            <p>I am a freelance digital artist with a passion for creativity and technology. I enjoy working on illustrations and exploring new artistic techniques. Currently, I am studying programming to expand my skill set and integrate art with technology.</p>
+            <p>I aspire to create and design RPG maker games, combining storytelling and interactive experiences. Additionally, I want to develop websites for clients, as web development allows me to explore both creativity and technical skills.</p>
+            <div class="pixel-overlay"></div> <!-- Empty container for pixels -->
+        </div>
+
+        <div class="software-container">
+            <br>
+            <p>📌The digital art software I use for my clients:</p>
+            <div class="software-logos">
+                <div class="logo-box">
+                    <img src="res/clip-studio-logo.png" alt="Clip Studio">
+                    <span>Clip Studio Paint PRO</span>
+                </div>
+                <div class="logo-box">
+                    <img src="res/medibang-logo.png" alt="Medibang">
+                    <span>Medibang</span>
+                </div>
+                <div class="logo-box">
+                    <img src="res/ibispaint-logo.png" alt="IbisPaint">
+                    <span>IbisPaint</span>
+                </div>
+                <div class="logo-box">
+                    <img src="res/photoshop-logo.png" alt="Photoshop">
+                    <span>Photoshop 2015</span>
+                </div>
+                <div class="logo-box">
+                    <img src="res/sai-logo.png" alt="SAI">
+                    <span>PaintTool SAI</span>
                 </div>
             </div>
-            <div class="software-container">
-                <br>
-                <p>📌The digital art software I use for my clients:</p>
-                <div class="software-logos">
-                    <div class="logo-box">
-                        <img src="clip-studio-logo.png" alt="Clip Studio">
-                        <span>Clip Studio Paint PRO</span>
-                    </div>
-                    <div class="logo-box">
-                        <img src="medibang-logo.png" alt="Medibang">
-                        <span>Medibang</span>
-                    </div>
-                    <div class="logo-box">
-                        <img src="ibispaint-logo.png" alt="IbisPaint">
-                        <span>IbisPaint</span>
-                    </div>
-                    <div class="logo-box">
-                        <img src="photoshop-logo.png" alt="Photoshop">
-                        <span>Photoshop 2015</span>
-                    </div>
-                    <div class="logo-box">
-                        <img src="sai-logo.png" alt="SAI">
-                        <span>PaintTool SAI</span>
-                    </div>
-                </div>
-            </div>
-            </div>  
-            <script src="about.js"></script>
-    </body>
+        </div>
+    </div>
+
+    <script src="js/about.js"></script>
+    
+</body>
 </html>

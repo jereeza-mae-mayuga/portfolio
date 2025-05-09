@@ -1,14 +1,29 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fff5d1;
-    opacity: 1;
-    background-image: radial-gradient(#f4a300 2px, transparent 2px), radial-gradient(#f4a300 2px, #fff5d1 2px);
+    background-image: radial-gradient(#f4a300 2px, transparent 2px),
+                      radial-gradient(#f4a300 2px, #fff5d1 2px);
     background-size: 80px 80px;
     background-position: 0 0, 40px 40px;
 }
 
+.certif-container h1 {
+    font-size: 3rem; /* Or whatever size fits best */
+    font-weight: 700; /* Makes it bold */
+    text-align: center; /* Center the header */
+    color: #f4a300; /* Adjust color if necessary */
+    margin-top: 50px; /* Adds some space above */
+  }
+  
+
+/* Header */
 header {
     width: 100%;
     background-color: #f4a300;
@@ -32,6 +47,7 @@ nav {
     height: 40px;
 }
 
+/* Navigation */
 .nav-links {
     list-style: none;
     display: flex;
@@ -56,6 +72,7 @@ nav {
     border-bottom: 2px solid #ffffff;
 }
 
+/* Socials */
 .social-icons {
     display: flex;
     gap: 10px;
@@ -71,6 +88,7 @@ nav {
     opacity: 0.7;
 }
 
+/* Hamburger */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -84,18 +102,18 @@ nav {
     background-color: white;
 }
 
+/* Content Containers */
+.container,
+.tech-container,
 .certif-container {
-    padding: 100px 20px 20px;
-    max-width: 1000px;
+    width: 100%;
+    max-width: 1200px;
+    color: #292929;
     margin: 0 auto;
+    padding: 100px 20px 40px;
 }
 
-.certif-container h1 {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
+/* Paragraph Box */
 .paragraph-box {
     margin-bottom: 30px;
     padding: 20px;
@@ -110,64 +128,35 @@ nav {
     color: #444;
 }
 
+/* Logo Sections */
+.software-logos,
 .certif-logos {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
-    margin-top: 20px;
-    justify-content: center; 
-    }
-
-.certif-logos .logo-box {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 250px;
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-.certif-logos .logo-box img {
-    width: 250px;
-    height: auto;
-    object-fit: contain;
-    border-radius: 10px;
-    background-color: #fff1bd;
-    border: 3px solid #f4a300;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(244, 163, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.certif-logos .logo-box img:hover {
-    transform: scale(1.15);
-}
-
-.certif-logos .logo-box .certif-downloads {
-    margin-top: 20px;
-    z-index: 1;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 0;
 }
 
 .logo-box {
     position: relative;
     display: flex;
-    margin-right: 50px;
     flex-direction: column;
     align-items: center;
-    width: 220px;
-    margin-bottom: 40px;
+    justify-content: center;
+    width: 180px;
+    margin: 20px auto;
     text-align: center;
 }
 
 .logo-box img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    aspect-ratio: 1 / 1;
     object-fit: contain;
-    border-radius: 10px;
     background-color: #fff1bd;
     border: 3px solid #f4a300;
     padding: 15px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(244, 163, 0, 0.2);
     transition: transform 0.3s ease;
 }
@@ -190,9 +179,31 @@ nav {
     opacity: 1;
 }
 
+/* Certification Section */
+.certif-logos .logo-box img {
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    background-color: #fff1bd;
+    border: 3px solid #f4a300;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(244, 163, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.certif-logos .logo-box img:hover {
+    transform: scale(1.15);
+}
+
+.certif-logos .logo-box .certif-downloads {
+    margin-top: 20px;
+    z-index: 1;
+}
+
 .certif-downloads a {
     background: none;
-    color: #f4a300;
+    color: #292929;
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
@@ -206,6 +217,7 @@ nav {
     color: white;
 }
 
+/* Popup Viewer */
 .popup-overlay {
     position: fixed;
     top: 0;
@@ -227,6 +239,7 @@ nav {
     margin: 0 auto;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -238,7 +251,7 @@ nav {
         background-color: #f4a300;
         position: absolute;
         top: 70px;
-        right: 20px;
+        right: 10px;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -252,8 +265,19 @@ nav {
         margin-top: 10px;
     }
 
-    .certif-logos {
-        flex-direction: column;
-        align-items: center;
+    .logo-box {
+        width: 45%;
+        margin: 10px auto;
+    }
+
+    .logo-box img {
+        width: 100px;
+        height: auto;
+    }
+
+    .certif-logos .logo-box img {
+        max-width: 150px;
+        width: 100%;
+        height: auto;
     }
 }
