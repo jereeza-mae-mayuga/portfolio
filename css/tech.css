@@ -136,18 +136,18 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 160px;
+  width: 100px;
   margin-bottom: 40px;
 }
 
 .logo-box img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   border-radius: 10px;
   background-color: #fff1bd;
   border: 3px solid #f4a300;
-  padding: 15px;
+  padding: 10px;
   box-shadow: 0 4px 8px rgba(244, 163, 0, 0.2);
   transition: transform 0.3s ease;
 }
@@ -194,12 +194,12 @@ h1 {
 
   .logo-box {
       flex: 1 1 30%;
-      max-width: 120px;
+      max-width: 100px;
   }
 
   .logo-box img {
-      width: 120px;
-      height: auto;
+      width: 80px;
+      height: 80px;
       max-height: 120px;
   }
 }

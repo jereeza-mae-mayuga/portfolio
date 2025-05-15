@@ -1,17 +1,26 @@
+:root {
+  --theme: #f4a300;
+  --accent: #ffe08a;
+  --bg: #fff5d1;
+  --text: #333;
+}
+
 body {
   font-family: 'Nunito', sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #fff5d1;
-  opacity: 1;
-  background-image: radial-gradient(#f4a300 2px, transparent 2px), radial-gradient(#f4a300 2px, #fff5d1 2px);
+  min-height: 100vh;
+  text-align: center;
+  background-color: var(--bg);
+  background-image: radial-gradient(var(--theme) 2px, transparent 2px),
+                    radial-gradient(var(--theme) 2px, var(--bg) 2px);
   background-size: 80px 80px;
   background-position: 0 0, 40px 40px;
+  color: var(--text);
 }
 
 header {
   width: 100%;
-  background-color: #f4a300;
+  background-color: var(--theme);
   padding: 15px 0;
   position: fixed;
   top: 0;
@@ -32,6 +41,7 @@ nav {
   height: 40px;
 }
 
+/* Nav links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -43,7 +53,7 @@ nav {
 .nav-links a {
   text-decoration: none;
   font-weight: 600;
-  color: #ffffff;
+  color: white;
   padding-bottom: 5px;
   opacity: 0.7;
   transition: opacity 0.3s ease, border-bottom 0.3s ease;
@@ -52,10 +62,10 @@ nav {
 .nav-links a:hover,
 .nav-links a.active {
   opacity: 1;
-  color: #ffffff;
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid white;
 }
 
+/* Social Icons */
 .social-icons {
   display: flex;
   gap: 10px;
@@ -64,13 +74,14 @@ nav {
 .social-icons img {
   width: 30px;
   height: 30px;
-  transition: 0.3s;
+  transition: opacity 0.3s;
 }
 
 .social-icons img:hover {
   opacity: 0.7;
 }
 
+/* Hamburger menu */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -84,6 +95,7 @@ nav {
   background-color: white;
 }
 
+/* About container */
 .about-container {
   padding: 120px 20px 40px;
   max-width: 1000px;
@@ -92,20 +104,19 @@ nav {
 }
 
 h1 {
-  font-size: 3rem; /* Ensure this is the same size */
+  font-size: 3rem;
   font-weight: 700;
-  text-align: center;
   margin-top: 50px;
-  color: #f4a300; /* Match your theme color */
+  color: var(--theme);
 }
 
 h3 {
   font-size: 22px;
   color: #444;
   margin-bottom: 30px;
-  text-align: center;
 }
 
+/* Contact buttons: add Bootstrap btn base */
 .contact-buttons {
   display: flex;
   justify-content: center;
@@ -114,14 +125,17 @@ h3 {
 }
 
 .contact-buttons .btn-full {
-  background-color: #f4a300;
-  color: white;
+  /* Add Bootstrap button base */
+  display: inline-block;
   padding: 14px 28px;
-  text-decoration: none;
+  background-color: var(--theme);
+  color: white;
   border-radius: 5px;
   font-weight: bold;
   font-size: 16px;
-  transition: 0.3s;
+  text-decoration: none;
+  border: none;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .contact-buttons .btn-full:hover {
@@ -130,6 +144,7 @@ h3 {
   transform: scale(1.05);
 }
 
+/* Contact form */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -140,9 +155,10 @@ h3 {
   background-color: #fff1bd;
   padding: 30px;
   border-radius: 10px;
-  border: 2px solid #f4a300;
+  border: 2px solid var(--theme);
   max-width: 600px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .contact-form input,
@@ -162,7 +178,7 @@ h3 {
 }
 
 .contact-form button {
-  background-color: #f4a300;
+  background-color: var(--theme);
   color: white;
   padding: 12px 20px;
   border: none;
@@ -171,7 +187,7 @@ h3 {
   width: 100%;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .contact-form button:hover {
@@ -180,21 +196,7 @@ h3 {
   transform: scale(1.05);
 }
 
-.social-icons {
-  display: flex;
-  gap: 10px;
-}
-
-.social-icons img {
-  width: 30px;
-  height: 30px;
-  transition: 0.3s;
-}
-
-.social-icons img:hover {
-  opacity: 0.7;
-}
-
+/* Responsive for mobile */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -203,7 +205,7 @@ h3 {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #f4a300;
+    background-color: var(--theme);
     position: absolute;
     top: 70px;
     right: 20px;
