@@ -1,7 +1,5 @@
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("nav-links");
-const toggleBtn = document.getElementById("darkModeToggle");
-const logo = document.getElementById("site-logo");
 
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
@@ -17,12 +15,30 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   anime({
-    targets: ".paragraph-box",
-    translateY: [30, 0],
+    targets: ".about-container h3",
+    translateY: [20, 0],
     opacity: [0, 1],
-    delay: 500,
+    delay: 300,
     duration: 1000,
     easing: "easeOutCubic"
+  });
+
+  anime({
+    targets: ".contact-buttons a",
+    translateY: [30, 0],
+    opacity: [0, 1],
+    delay: anime.stagger(200, { start: 600 }),
+    duration: 800,
+    easing: "easeOutCubic"
+  });
+
+  anime({
+    targets: ".contact-form-container",
+    translateY: [40, 0],
+    opacity: [0, 1],
+    delay: 1000,
+    duration: 1000,
+    easing: "easeOutExpo"
   });
 
   anime({
@@ -31,25 +47,5 @@ window.addEventListener("DOMContentLoaded", () => {
     opacity: [0, 1],
     duration: 1000,
     easing: "easeOutExpo"
-  });
-});
-
-document.querySelectorAll(".logo-box img").forEach((img) => {
-  img.addEventListener("mouseenter", () => {
-    anime({
-      targets: img,
-      scale: 1.15,
-      duration: 300,
-      easing: "easeOutQuad"
-    });
-  });
-
-  img.addEventListener("mouseleave", () => {
-    anime({
-      targets: img,
-      scale: 1,
-      duration: 300,
-      easing: "easeOutQuad"
-    });
   });
 });

@@ -6,10 +6,9 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
-// Pixel movement logic based on mouse movement (less frequent)
 document.addEventListener("mousemove", (e) => {
   const numberOfPixels = 1;
-  const chance = 0.055; // Reduced to avoid overwhelming effect
+  const chance = 0.05; 
 
   if (Math.random() < chance) {
     for (let i = 0; i < numberOfPixels; i++) {
@@ -20,22 +19,18 @@ document.addEventListener("mousemove", (e) => {
       const size = Math.random() * (60 - 30) + 30;
       const offsetX = Math.random() * 15 - 7.5;
       const offsetY = Math.random() * 15 - 7.5;
-      const x = e.clientX + offsetX;
-      const y = e.clientY + offsetY;
 
       pixel.style.position = "absolute";
-      pixel.style.left = `${x}px`;
-      pixel.style.top = `${y}px`;
+      pixel.style.left = `${e.clientX + offsetX}px`;
+      pixel.style.top = `${e.clientY + offsetY}px`;
       pixel.style.width = `${size}px`;
       pixel.style.height = `${size}px`;
       pixel.style.pointerEvents = "none";
       document.body.appendChild(pixel);
 
       setTimeout(() => {
-        pixel.style.left = `${e.clientX + offsetX}px`;
-        pixel.style.top = `${e.clientY + offsetY}px`;
         pixel.style.opacity = 0;
-      }, 50);
+      }, 100);
 
       setTimeout(() => {
         pixel.remove();
@@ -44,8 +39,15 @@ document.addEventListener("mousemove", (e) => {
   }
 });
 
-
 window.addEventListener("DOMContentLoaded", () => {
+  anime({
+    targets: "nav",
+    translateY: [-40, 0],
+    opacity: [0, 1],
+    duration: 1000,
+    easing: "easeOutExpo"
+  });
+
   anime({
     targets: ".about-container h1",
     translateY: [-50, 0],
@@ -58,19 +60,28 @@ window.addEventListener("DOMContentLoaded", () => {
     targets: ".paragraph-box",
     translateY: [30, 0],
     opacity: [0, 1],
-    delay: 500,
+    delay: 400,
     duration: 1000,
     easing: "easeOutCubic"
   });
 
   anime({
-    targets: "nav",
-    translateY: [-40, 0],
+    targets: ".logo-box",
+    translateY: [30, 0],
     opacity: [0, 1],
-    duration: 1000,
-    easing: "easeOutExpo"
+    delay: anime.stagger(200, { start: 800 }),
+    duration: 900,
+    easing: "easeOutCubic"
   });
 });
+  anime({
+    targets: ".software-container p",
+    translateY: [20, 0],
+    opacity: [0, 1],
+    delay: 800,
+    duration: 900,
+    easing: "easeOutCubic"
+  });
 
 document.querySelectorAll(".logo-box img").forEach((img) => {
   img.addEventListener("mouseenter", () => {

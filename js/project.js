@@ -6,7 +6,23 @@ hamburger.addEventListener("click", () => {
 });
 
 window.addEventListener("DOMContentLoaded", () => {
-  // Nav
+  anime({
+    targets: ".project-container h1",
+    translateY: [-50, 0],
+    opacity: [0, 1],
+    duration: 1200,
+    easing: "easeOutExpo"
+  });
+
+  anime({
+    targets: ".project-container .subtitle",
+    translateY: [30, 0],
+    opacity: [0, 1],
+    delay: 400,
+    duration: 1000,
+    easing: "easeOutCubic"
+  });
+
   anime({
     targets: "nav",
     translateY: [-40, 0],
@@ -15,52 +31,21 @@ window.addEventListener("DOMContentLoaded", () => {
     easing: "easeOutExpo"
   });
 
-  // Title
   anime({
-    targets: ".tech-container h1",
-    translateY: [-50, 0],
+    targets: ".project-card",
+    translateY: [50, 0],
     opacity: [0, 1],
-    duration: 1200,
-    easing: "easeOutExpo"
-  });
-
-  // Intro paragraph
-  anime({
-    targets: ".paragraph-box",
-    translateY: [30, 0],
-    opacity: [0, 1],
-    delay: 400,
+    delay: anime.stagger(200, { start: 600 }),
     duration: 1000,
-    easing: "easeOutCubic"
-  });
-
-  // Section subtitles (📌 lines)
-  anime({
-    targets: ".software-container p",
-    translateY: [20, 0],
-    opacity: [0, 1],
-    delay: anime.stagger(400, { start: 800 }),
-    duration: 900,
-    easing: "easeOutCubic"
-  });
-
-  // Logos stagger in
-  anime({
-    targets: ".logo-box",
-    translateY: [30, 0],
-    opacity: [0, 1],
-    delay: anime.stagger(120, { start: 1200 }),
-    duration: 900,
-    easing: "easeOutCubic"
+    easing: "easeOutExpo"
   });
 });
 
-// Hover animation for logos
-document.querySelectorAll(".logo-box img").forEach((img) => {
+document.querySelectorAll(".project-image img").forEach((img) => {
   img.addEventListener("mouseenter", () => {
     anime({
       targets: img,
-      scale: 1.15,
+      scale: 1.05,
       duration: 300,
       easing: "easeOutQuad"
     });

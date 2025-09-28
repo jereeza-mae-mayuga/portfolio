@@ -101,87 +101,6 @@ h3 {
   }
 }
 
-@keyframes sway {
-  0% { transform: translateX(-50%) rotate(0deg); }
-  50% { transform: translateX(-50%) rotate(5deg); }
-  100% { transform: translateX(-50%) rotate(-5deg); }
-}
-
-.lightbulb-wrapper {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: sway 4s ease-in-out infinite alternate;
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  pointer-events: auto;
-}
-
-.string {
-  width: 2px;
-  height: 100px;
-  background-color: #444;
-}
-
-.lightbulb {
-  font-size: 40px;
-  transform: rotate(180deg);
-  cursor: pointer;
-}
-
-@keyframes jiggle {
-  0% { transform: rotate(180deg) translateX(0); }
-  25% { transform: rotate(180deg) translateX(-8px); }
-  50% { transform: rotate(180deg) translateX(8px); }
-  75% { transform: rotate(180deg) translateX(-4px); }
-  100% { transform: rotate(180deg) translateX(0); }
-}
-
-.lightbulb.clicked {
-  animation: jiggle 0.4s ease;
-}
-
-body.dark-mode {
-  background-color: #1f1f1f;
-  color: #f5f5f5;
-  background-image: radial-gradient(#ffd87a 2px, transparent 2px),
-                    radial-gradient(#ffd87a 2px, #1f1f1f 2px);
-}
-
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode p,
-body.dark-mode a,
-body.dark-mode li,
-body.dark-mode span,
-body.dark-mode label {
-  color: #f5f5f5;
-}
-
-body.dark-mode h1,
-body.dark-mode h2 {
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-}
-
-body.dark-mode .lightbulb {
-  color: #ffe75c;
-}
-
-body.dark-mode .btn {
-  background-color: #ffd87a !important;
-  color: #333 !important;
-}
-
-body.dark-mode .btn:hover {
-  background-color: #f4c84e !important;
-  color: #000 !important;
-}
-
-
 #splash {
   position: fixed;
   top: 0;
@@ -193,12 +112,12 @@ body.dark-mode .btn:hover {
   justify-content: center;
   align-items: center;
   z-index: 99999;
-  transition: transform 1s ease;
+  transition: transform 0.4s ease;
 }
 
 .splash-logo {
   max-width: 300px;
-  animation: popIn 1.2s ease forwards;
+  animation: popIn 0.6s ease forwards; 
 }
 
 @keyframes popIn {
@@ -209,3 +128,11 @@ body.dark-mode .btn:hover {
 #splash.hide {
   transform: translateY(-100%);
 }
+
+
+
+
+
+
+
+

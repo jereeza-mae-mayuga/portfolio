@@ -15,11 +15,11 @@ body {
 }
 
 .certif-container h1 {
-    font-size: 3rem; /* Or whatever size fits best */
-    font-weight: 700; /* Makes it bold */
-    text-align: center; /* Center the header */
-    color: #f4a300; /* Adjust color if necessary */
-    margin-top: 50px; /* Adds some space above */
+    font-size: 3rem; 
+    font-weight: 700; 
+    text-align: center; 
+    color: #f4a300;
+    margin-top: 50px; 
   }
   
 
