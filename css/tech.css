@@ -194,12 +194,16 @@ h1 {
 
   .logo-box {
       flex: 1 1 30%;
-      max-width: 100px;
+      max-width: 90px;
   }
 
   .logo-box img {
       width: 80px;
       height: 80px;
       max-height: 120px;
+  }
+
+  .software-logos {
+    gap: 30px;
   }
 }

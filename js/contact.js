@@ -6,6 +6,7 @@ hamburger.addEventListener("click", () => {
 });
 
 window.addEventListener("DOMContentLoaded", () => {
+
   anime({
     targets: ".about-container h1",
     translateY: [-50, 0],
@@ -25,10 +26,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
   anime({
     targets: ".contact-buttons a",
-    translateY: [30, 0],
-    opacity: [0, 1],
-    delay: anime.stagger(200, { start: 600 }),
-    duration: 800,
+    translateY: [20, 0],   
+    delay: anime.stagger(150, { start: 500 }),
+    duration: 600,
     easing: "easeOutCubic"
   });
 
@@ -41,6 +41,7 @@ window.addEventListener("DOMContentLoaded", () => {
     easing: "easeOutExpo"
   });
 
+  // Nav
   anime({
     targets: "nav",
     translateY: [-40, 0],
